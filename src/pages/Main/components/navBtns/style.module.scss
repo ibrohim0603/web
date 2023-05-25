@@ -1,0 +1,45 @@
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin: 3% auto;
+  .active {
+    width: 378.67px;
+    height: 48px;
+    background: #f2f6f4;
+    border: 1px solid #05422c;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 12px;
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #05422c;
+  }
+  a {
+    width: 378.67px;
+    height: 48px;
+    background: #f2f6f4;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 12px;
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #05422c;
+  }
+}

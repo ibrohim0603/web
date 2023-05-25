@@ -1,0 +1,18 @@
+.title {
+  margin-bottom: 5% !important;
+  &_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+  }
+  &_name {
+    border-bottom: 3px solid #000;
+  }
+  &_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

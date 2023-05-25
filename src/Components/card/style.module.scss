@@ -1,0 +1,12 @@
+.card {
+  &_text {
+    padding: 4%;
+  }
+  &_nn {
+    display: none;
+  }
+}
+.br {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

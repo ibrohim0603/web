@@ -1,0 +1,150 @@
+:root {
+  --dark: #05422c;
+  --lightGreen: #648a7c;
+  --light: #fafafa;
+}
+.flex {
+  display: flex;
+  position: relative;
+}
+
+.info {
+  padding: 5%;
+  background-color: #f2f6f4;
+  &_size {
+    width: 90%;
+    margin: auto;
+  }
+  &_flex {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+  &_card {
+    display: flex;
+    gap: 24px;
+    align-items: start;
+
+    img {
+      width: 80px;
+    }
+  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.showcase {
+  margin-top: 6%;
+  &_products {
+    position: absolute;
+    z-index: -10;
+    bottom: 0px;
+    right: 0;
+    img {
+      width: 500px;
+    }
+  }
+  &_info {
+    margin: auto 5%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  &_dis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: var(--light);
+    width: 30%;
+  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--light);
+    text-shadow: -1px 3px 3px var(--dark);
+    h1 {
+      font-weight: 900;
+      font-size: 64px;
+      line-height: 110%;
+      letter-spacing: -4px;
+      color: var(--light);
+      width: 60%;
+      text-shadow: -1px -3px 3px var(--dark);
+    }
+  }
+  &_btn {
+    color: var(--light);
+    text-shadow: -1px 2px 3px var(--dark);
+  }
+  &_flex {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.banner {
+  height: 100vh;
+  position: relative;
+  z-index: -10;
+  background-image: conic-gradient(
+    from var(--rotate),
+    var(--dark),
+    var(--lightGreen) 60%
+  );
+  margin-top: -50px;
+  z-index: -1;
+  animation: rotateAnimation 10s linear infinite;
+}
+@keyframes rotateAnimation {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: -360deg;
+  }
+}
+.banner .content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 33%;
+}
+.banner h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: xxx-large;
+}
+.banner button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: var(--dark);
+  font-weight: bold;
+}
+.statis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--dark);
+}
+.statis p:nth-child(1) {
+  font-size: x-large;
+}
+.statis p:nth-child(2) {
+  font-size: xxx-large;
+  font-weight: bold;
+}

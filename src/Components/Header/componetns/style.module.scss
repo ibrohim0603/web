@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .input {
+    .icon {
+      padding: 13px 15px;
+      border-radius: 50%;
+      border: 1px solid #17af26;
+      background-color: #17af26;
+      path,
+      svg {
+        color: white !important;
+      }
+    }
+    form {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    input {
+      padding: 15px 20px;
+      width: 400px;
+      border-radius: 20px;
+      border: 1px solid whitesmoke;
+    }
+  }
+  img {
+    transform: translateX(-30px);
+  }
+
+  .user {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+}
