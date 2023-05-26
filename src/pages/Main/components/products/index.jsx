@@ -1,85 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBtns from "../navBtns";
-import { useState, useEffect } from "react";
-import { Button } from "primereact/button";
-import { Carousel } from "primereact/carousel";
-import { Tag } from "primereact/tag";
-import { ProductService } from "./service/ProductService";
+import s from "./style.module.scss";
+import { Carousel } from "antd";
+import { instance } from "../../../../axios";
+import seller from "../../../../assets/images.png";
+import { Link } from "react-router-dom";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
-  const responsiveOptions = [
-    {
-      breakpoint: "1199px",
-      numVisible: 1,
-      numScroll: 1,
-    },
-    {
-      breakpoint: "991px",
-      numVisible: 2,
-      numScroll: 1,
-    },
-    {
-      breakpoint: "767px",
-      numVisible: 1,
-      numScroll: 1,
-    },
-  ];
-
-  const getSeverity = (product) => {
-    switch (product.inventoryStatus) {
-      case "INSTOCK":
-        return "success";
-
-      case "LOWSTOCK":
-        return "warning";
-
-      case "OUTOFSTOCK":
-        return "danger";
-
-      default:
-        return null;
-    }
-  };
-
   useEffect(() => {
-    ProductService.getProductsSmall().then((data) =>
-      setProducts(data.slice(0, 9))
-    );
+    instance
+      .get("/products")
+      .then((res) => setProducts(res?.data?.data.slice(-8)));
   }, []);
 
-  const productTemplate = (product) => {
-    return (
-      <div className="border-1 surface-border border-round m-2 text-center py-5 px-3">
-        <div className="mb-3">
-          <img
-            src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`}
-            alt={product.name}
-            className="w-6 shadow-2"
-          />
-        </div>
-        <div>
-          <h4 className="mb-1">{product.name}</h4>
-          <h6 className="mt-0 mb-3">${product.price}</h6>
-          <Tag
-            value={product.inventoryStatus}
-            severity={getSeverity(product)}
-          ></Tag>
-          <div className="mt-5 flex flex-wrap gap-2 justify-content-center">
-            <Button icon="pi pi-search" className="p-button p-button-rounded" />
-            <Button
-              icon="pi pi-star-fill"
-              className="p-button-success p-button-rounded"
-            />
-          </div>
-        </div>
-      </div>
-    );
-  };
   return (
-    <div>
+    <div className={s.card}>
       <div>
         <NavBtns />
+      </div>
+      <div className={s.flex}>
+        <div className={s.flex_card}>
+          <img src={seller} alt="" />
+          <h3>Shop our Best Sellers</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Ullamcorper ipsum varius
+            lorem blandit lectus magnis feugiat.{" "}
+          </p>
+          <button>View All</button>
+        </div>
+        <div className="card">
+          <Carousel autoplay>
+            {products?.map((e) => {
+              return (
+                <div className={s.card_flex} key={e?.id}>
+                  <div className={s.card_img}>
+                    {e?.active === false ? <span>нет в наличии</span> : ""}
+                    <img
+                      id={s.img}
+                      src={`http://3.138.204.20/upload/${e?.photo?.path}`}
+                      alt={e.name}
+                      className="w-6 shadow-2"
+                    />
+                  </div>
+                  <div className={s.card_info}>
+                    <h4>{e?.name_Uz}</h4>
+                    <h5>{e?.description_En}</h5>
+                    <br />
+                    <h2>
+                      ${e?.price} <span> ${e?.discount}</span>
+                    </h2>
+                    <button>
+                      <Link to={`/single/${e?.id}`}>Add to Cart</Link>
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
       </div>
     </div>
   );

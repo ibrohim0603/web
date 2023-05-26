@@ -1,0 +1,60 @@
+.footer {
+  background: #3e3e3e;
+  padding: 40px;
+  &_img {
+    img {
+      width: 20%;
+      border-radius: 10%;
+      mix-blend-mode: difference;
+    }
+  }
+  &_info {
+    h4 {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      width: 70%;
+      text-align: justify;
+      color: #9d9ea2;
+    }
+  }
+  &_link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &_links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  &_flex {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    h2 {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      /* identical to box height, or 30px */
+
+      color: #ffffff;
+    }
+    a {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      /* identical to box height, or 21px */
+
+      /* Neutral/200 */
+      color: #9d9ea2;
+    }
+  }
+}

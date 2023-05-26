@@ -40,11 +40,12 @@
 
 .showcase {
   margin-top: 6%;
+  margin-bottom: 120px;
   &_products {
     position: absolute;
     z-index: -10;
     bottom: 0px;
-    right: 0;
+    right: 10px;
     img {
       width: 500px;
     }

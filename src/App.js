@@ -1,8 +1,10 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
-import Showcase from "./Components/Showcase";
+
 import Main from "./pages/Main";
+import Single from "./pages/Single";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -10,13 +12,11 @@ function App() {
       <div className="size90">
         <Header />
       </div>
-      <div className="header">
-        <Navbar />
-        <Showcase />
-      </div>
-      <div className="size90">
-        <Main />
-      </div>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/single/:id" element={<Single />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

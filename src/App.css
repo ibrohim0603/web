@@ -3,3 +3,11 @@
   margin: auto;
   border-bottom: 1px solid #ddd;
 }
+
+.slick-list {
+  width: 800px;
+}
+
+.slick-dots li.slick-active button {
+  background: #196666 !important;
+}

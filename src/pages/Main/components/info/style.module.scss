@@ -1,0 +1,68 @@
+.info {
+  background: #000;
+  padding: 10% 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  &_card {
+    display: flex;
+    gap: 32px;
+  }
+  &_btn {
+    margin: auto;
+    button {
+      background: #17af26;
+      border-radius: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 56px;
+      gap: 8px;
+      border: 1px solid #17af26;
+      a {
+        font-family: "Lexend";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        /* identical to box height, or 24px */
+
+        /* Neutral/0 */
+        color: #ffffff;
+      }
+    }
+  }
+  &_text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h1 {
+      margin: auto;
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 110%;
+      width: 70%;
+      text-align: center;
+      letter-spacing: -4px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    p {
+      margin: auto;
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      /* or 24px */
+      text-align: center;
+      width: 70%;
+      /* Neutral/200 */
+      color: #9d9ea2;
+    }
+  }
+}
