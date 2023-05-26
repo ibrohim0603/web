@@ -7,6 +7,9 @@
   &_card {
     display: flex;
     gap: 32px;
+    img {
+      width: 50%;
+    }
   }
   &_btn {
     margin: auto;
@@ -63,6 +66,24 @@
       width: 70%;
       /* Neutral/200 */
       color: #9d9ea2;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .info {
+    &_card {
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+    }
+    &_text {
+      h1 {
+        font-size: x-large;
+        width: 100%;
+        letter-spacing: normal;
+      }
     }
   }
 }

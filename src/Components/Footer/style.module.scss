@@ -72,3 +72,32 @@
     }
   }
 }
+
+@media (max-width: 690px) {
+  .footer {
+    &_flex {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    &_links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &_info {
+      h4 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    &_links {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}

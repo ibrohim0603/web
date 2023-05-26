@@ -6,7 +6,7 @@ import Image from "../image/img";
 
 export default function Header() {
   return (
-    <div className={s.header}>
+    <div className={s.header} id="active">
       <a href="/">
         <Image
           src={"/assets/logos/white-logo.png"}

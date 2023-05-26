@@ -35,3 +35,18 @@
     align-items: center;
   }
 }
+
+@media (max-width: 1150px) {
+  .input {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    .user {
+      p {
+        display: none;
+      }
+    }
+  }
+}

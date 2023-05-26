@@ -14,8 +14,8 @@ export default function Showcase() {
             <div className="showcase_flex">
               <div className="showcase_text">
                 <h4>BEST SELLER</h4>
-                <h1>BEST DISPENSARY TO BUY WEED ONLINE </h1>
-                <h4>Vitamins & Supplements</h4>
+                <h4>Souverirs & Surpise</h4>
+                <h1>Buy a quality product AND in the right place</h1>
               </div>
               <div className="showcase_dis">
                 <h4>Get 25% off</h4>

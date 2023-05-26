@@ -21,14 +21,14 @@ export default function Main() {
           </div>
         </div>
         <Product />
-        <div style={{ margin: "10% 0" }}>
+        <div style={{ margin: "10% 0" }} id="title">
           <Text text={"CHOOSE YOUR PRODUCT"} align={"start"} fsize={"55px"} />
         </div>
         <ChoseProduct />
       </div>
       <Info />
       <div className={s.main}>
-        <div style={{ margin: "10% 0" }}>
+        <div style={{ margin: "10% 0" }} id="title">
           <Text text={"RECENTLY ADDED"} align={"start"} fsize={"55px"} />
         </div>
         <ChoseProduct />

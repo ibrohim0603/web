@@ -1,8 +1,3 @@
-// #img {
-//   width: 110px;
-//   height: 300px;
-// }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -109,14 +104,13 @@
       border: 1px solid #17af26;
       background: #17af26;
       border-radius: 100px;
-      a {
-        font-family: "Lexend";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 150%;
-        color: #ffffff;
-      }
+      cursor: pointer;
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      color: #ffffff;
     }
     h4 {
       font-family: "Lexend";
@@ -145,6 +139,18 @@
         text-decoration-line: line-through;
 
         color: #9d9ea2;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .card {
+    .flex {
+      display: contents;
+      gap: 40px;
+      &_card {
+        width: 100%;
       }
     }
   }

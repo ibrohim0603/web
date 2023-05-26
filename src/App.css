@@ -11,3 +11,14 @@
 .slick-dots li.slick-active button {
   background: #196666 !important;
 }
+
+@media (max-width: 1150px) {
+  .slick-list {
+    width: unset;
+  }
+}
+@media (max-width: 350px) {
+  #title h1 {
+    font-size: 35px !important;
+  }
+}

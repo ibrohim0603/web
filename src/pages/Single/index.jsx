@@ -23,6 +23,16 @@ export default function Single() {
       setCounter(counter - 1);
     }
   }
+  setTimeout(() => {
+    if (counter === 1) {
+      function handleClick() {
+        const targetElement = document.getElementById("active");
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+
+      handleClick();
+    }
+  }, 500);
   return (
     <div className={s.single}>
       <div className={s.single_grid}>

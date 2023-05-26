@@ -74,10 +74,10 @@
       font-weight: 900;
       font-size: 64px;
       line-height: 110%;
-      letter-spacing: -4px;
       color: var(--light);
-      width: 60%;
+      width: 40%;
       text-shadow: -1px -3px 3px var(--dark);
+      text-transform: uppercase;
     }
   }
   &_btn {
@@ -148,4 +148,56 @@
 .statis p:nth-child(2) {
   font-size: xxx-large;
   font-weight: bold;
+}
+
+@media (max-width: 970px) {
+  .showcase_products {
+    display: none;
+  }
+  .info {
+    &_flex {
+      gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .showcase {
+    margin-top: 10%;
+    .banner {
+      padding: 100px 0;
+      height: 100%;
+    }
+    &_text {
+      h1 {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .showcase {
+    &_text {
+      h1 {
+        font-size: 35px;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .info {
+    &_card {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .showcase {
+    &_text {
+      h1 {
+        width: 100%;
+      }
+    }
+  }
 }
