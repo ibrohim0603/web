@@ -7,11 +7,13 @@ import Image from "../image/img";
 export default function Header() {
   return (
     <div className={s.header}>
-      <Image
-        src={"/assets/logos/white-logo.png"}
-        width={"200px"}
-        height={"120px"}
-      />
+      <a href="/">
+        <Image
+          src={"/assets/logos/white-logo.png"}
+          width={"200px"}
+          height={"120px"}
+        />
+      </a>
       <Input />
       <User />
     </div>

@@ -34,26 +34,26 @@ export default function Product() {
             {products?.map((e) => {
               return (
                 <div className={s.card_flex} key={e?.id}>
-                  <div className={s.card_img}>
-                    {e?.active === false ? <span>нет в наличии</span> : ""}
-                    <img
-                      id={s.img}
-                      src={`http://3.138.204.20/upload/${e?.photo?.path}`}
-                      alt={e.name}
-                      className="w-6 shadow-2"
-                    />
-                  </div>
-                  <div className={s.card_info}>
-                    <h4>{e?.name_Uz}</h4>
-                    <h5>{e?.description_En}</h5>
-                    <br />
-                    <h2>
-                      ${e?.price} <span> ${e?.discount}</span>
-                    </h2>
-                    <button>
-                      <Link to={`/single/${e?.id}`}>Add to Cart</Link>
-                    </button>
-                  </div>
+                  <Link to={`/single/${e?.id}`}>
+                    <div className={s.card_img}>
+                      {e?.active === false ? <span>нет в наличии</span> : ""}
+                      <img
+                        id={s.img}
+                        src={`http://3.138.204.20/upload/${e?.photo?.path}`}
+                        alt={e.name}
+                        className="w-6 shadow-2"
+                      />
+                    </div>
+                    <div className={s.card_info}>
+                      <h4>{e?.name_Uz}</h4>
+                      <h5>{e?.description_En}</h5>
+                      <br />
+                      <h2>
+                        ${e?.price} <span> ${e?.discount}</span>
+                      </h2>
+                      <button>Add to Cart</button>
+                    </div>
+                  </Link>
                 </div>
               );
             })}

@@ -20,27 +20,35 @@ export default function ChoseProduct() {
           return (
             <div className={s.choose_card} key={e?.id}>
               {e?.discount > 0 ? <h6>скидка</h6> : ""}
-              <div className={s.choose_img}>
-                {e?.active === false ? <span>нет в наличии</span> : ""}
-                <img
-                  src={`http://3.138.204.20/upload/${e?.photo.path}`}
-                  alt=""
-                />
-              </div>
-              <div className={s.choose_info}>
-                <h5> Категория: {e?.Category.name_Ru}</h5>
+              <Link to={`/single/${e?.id}`}>
+                <div className={s.choose_img}>
+                  {e?.active === false ? <span>нет в наличии</span> : ""}
+                  <img
+                    src={`http://3.138.204.20/upload/${e?.photo.path}`}
+                    alt=""
+                  />
+                </div>
+                <div className={s.choose_info}>
+                  <h5> Категория: {e?.Category.name_Ru}</h5>
 
-                <h3>{e?.name_Ru}</h3>
-                <p>{e?.type}</p>
-                <h2>
-                  {" "}
-                  $ {e?.price} {` | `} <span> $ {e?.discount}</span>
-                </h2>
-                <br />
-                <button>
-                  <Link to={`/single/${e?.id}`}>Add to Cart</Link>
-                </button>
-              </div>
+                  <h3>{e?.name_Ru}</h3>
+                  <p>{e?.type}</p>
+                  <h2>
+                    {" "}
+                    $ {e?.price}{" "}
+                    {e?.discount > 0 ? (
+                      <div>
+                        {` | `}
+                        <span> $ {e?.discount}</span>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </h2>
+                  <br />
+                  <button>Add to Cart</button>
+                </div>
+              </Link>
             </div>
           );
         })}

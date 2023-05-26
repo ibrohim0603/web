@@ -36,6 +36,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <div className={s.footer_rights}>
+        <div>
+          <h4>© 2023 Top Shelf BC. All Rights Reserved. </h4>
+        </div>
+      </div>
     </div>
   );
 }

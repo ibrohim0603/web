@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   gap: 30px;
   &_card {
+    transition: 0.3s;
     border: 1px solid #9d9ea2;
     padding: 5%;
     border-radius: 10px;
@@ -39,6 +40,14 @@
       width: 100%;
       background: #f4f4f4;
       border-radius: 8px;
+      transition: 0.3s;
+    }
+  }
+  &_card:hover {
+    transform: scale(1.025);
+    background: #f7f5f5;
+    img {
+      transform: scale(1.05);
     }
   }
   &_info {
@@ -65,7 +74,10 @@
       font-size: 18px;
       line-height: 150%;
       color: #eb2606;
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
       span {
         font-family: "Lexend";
         font-style: normal;
@@ -75,6 +87,18 @@
         text-decoration-line: line-through;
         color: #9d9ea280;
       }
+    }
+    p {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 150%;
+      /* or 27px */
+      text-align: center;
+
+      /* Neutral/500 */
+      color: #1a1e26;
     }
     h3 {
       font-family: "Lexend";
@@ -98,18 +122,18 @@
       background: #17af26;
       border-radius: 100px;
       border: none;
-      a {
-        font-family: "Lexend";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 150%;
-        color: #ffffff;
-      }
+      cursor: pointer;
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      color: #ffffff;
     }
   }
   &_img {
     position: relative;
+    padding-bottom: 20px;
     span {
       position: absolute;
       width: 152px;
