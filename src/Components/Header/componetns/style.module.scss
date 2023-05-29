@@ -2,6 +2,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .cart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    place-items: center;
+    p {
+      font-size: 10px;
+      transition: 0.3s;
+    }
+  }
+  .cart:hover {
+    cursor: pointer;
+    p {
+      transform: scale(1.5);
+    }
+  }
   .input {
     .icon {
       padding: 13px 15px;

@@ -5,9 +5,9 @@ import { CiShoppingBasket } from "react-icons/ci";
 export default function User() {
   return (
     <div className={s.user}>
-      <p>Your Account</p>
       <div className={s.cart}>
         <CiShoppingBasket fontSize={30} />
+        <p>Coming soon</p>
       </div>
     </div>
   );

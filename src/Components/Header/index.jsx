@@ -14,7 +14,7 @@ export default function Header() {
           height={"120px"}
         />
       </a>
-      <Input />
+      {/* <Input /> */}
       <User />
     </div>
   );

@@ -160,3 +160,25 @@
     }
   }
 }
+
+@media (max-width: 970px) {
+  .product {
+    .choose {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+@media (max-width: 690px) {
+  .product {
+    .choose {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .product {
+    .choose {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

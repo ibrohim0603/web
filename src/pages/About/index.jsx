@@ -51,7 +51,9 @@ export default function About() {
       )}
 
       <div className={s.about_form}>
-        <Map />
+        <div className={s.about_map}>
+          <Map />
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label>
             Номер

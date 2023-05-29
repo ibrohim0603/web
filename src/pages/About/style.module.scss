@@ -10,6 +10,11 @@
     color: #ffffff;
     margin: 3%;
   }
+  &_map {
+    iframe {
+      width: 80%;
+    }
+  }
   &_text {
     background: #3e3e3e;
     padding: 3% 0;
@@ -95,6 +100,37 @@
         background-color: #086c48;
         border-radius: 10px;
       }
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .about {
+    &_form {
+      grid-template-columns: 1fr;
+    }
+    &_map {
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  .about {
+    &_text {
+      margin-top: -15%;
+      padding: 10% 0;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .about {
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      border: none;
     }
   }
 }

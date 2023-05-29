@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import s from "./style.module.scss";
 import { instance } from "../../axios";
 import { Link, useLocation } from "react-router-dom";
+import { Product } from "../../context";
 
 export default function AllProduct() {
+  const { tovar, setTovar } = useContext(Product);
   const [products, setProducts] = useState([]);
   useEffect(() => {
     instance
@@ -14,7 +16,20 @@ export default function AllProduct() {
   }, []);
   const mal = useLocation();
 
-  console.log();
+  const newArray = [];
+
+  products.map((item, e = 0) => {
+    // console.log(item?.categoryId === tovar[0], "id");
+    e++;
+    console.log(e);
+    if (item?.categoryId === tovar[e]) {
+      newArray.push(item);
+      console.log(newArray, "arr");
+    }
+  });
+  // console.log(tovar[1]);
+  // console.log(newArray);
+
   return (
     <div className={s.product}>
       <div className={s.choose}>
