@@ -2,10 +2,11 @@
   background: #3e3e3e;
   padding: 40px;
   &_img {
+    padding-bottom: 10px;
     img {
-      width: 20%;
+      width: 30%;
       border-radius: 10%;
-      mix-blend-mode: difference;
+      mix-blend-mode: color-dodge;
     }
   }
   &_info {
@@ -15,7 +16,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
-      width: 70%;
+      width: 80%;
       text-align: justify;
       color: #9d9ea2;
     }

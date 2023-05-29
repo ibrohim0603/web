@@ -1,0 +1,100 @@
+.about {
+  min-height: 70vh;
+  //   margin: 5% auto;
+  h1 {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 110%;
+    color: #ffffff;
+    margin: 3%;
+  }
+  &_text {
+    background: #3e3e3e;
+    padding: 3% 0;
+    margin-top: -10%;
+    h3 {
+      border-left: 1px solid greenyellow;
+      border-bottom: 1px solid greenyellow;
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 35px;
+      color: #ffffff;
+      padding: 10% 2%;
+      padding-bottom: 20px;
+      margin: auto;
+      width: 95%;
+    }
+  }
+  &_form {
+    margin: 5% auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    form {
+      margin: auto;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+      p {
+        color: red;
+        font-size: 10px;
+        font-family: "Lexend";
+        font-style: normal;
+        letter-spacing: 1px;
+        text-transform: lowercase;
+        font-weight: 400;
+        line-height: 150%;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: "Lexend";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+        color: #9d9ea2;
+      }
+      input:focus,
+      textarea:focus {
+        border: 2px solid #17af26;
+      }
+      input,
+      textarea {
+        padding: 10px;
+        border: 1px solid #9d9ea2;
+        border-radius: 10px;
+        outline: none;
+        margin: 0px 0 10px 0;
+      }
+
+      textarea {
+        min-height: 100px;
+      }
+      button:hover {
+        background-color: transparent;
+        color: #086c48;
+      }
+      button {
+        transition: 0.2s;
+        padding: 10px 20px;
+        border: 1px solid #17af26;
+        color: wheat;
+        background-color: #086c48;
+        border-radius: 10px;
+      }
+    }
+  }
+}

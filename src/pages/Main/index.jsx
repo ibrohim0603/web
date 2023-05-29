@@ -3,7 +3,6 @@ import Product from "./components/products";
 import Text from "../../Components/Text/text";
 import s from "./style.module.scss";
 import Showcase from "../../Components/Showcase";
-import Navbar from "../../Components/Navbar";
 import ChoseProduct from "./components/chooseProducts";
 import Info from "./components/info";
 
@@ -11,7 +10,6 @@ export default function Main() {
   return (
     <div>
       <div>
-        <Navbar />
         <Showcase />
       </div>
       <div className={s.main}>

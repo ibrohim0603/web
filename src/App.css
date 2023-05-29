@@ -12,6 +12,10 @@
   background: #196666 !important;
 }
 
+.active span {
+  color: rgb(57, 196, 57) !important;
+}
+
 @media (max-width: 1150px) {
   .slick-list {
     width: unset;

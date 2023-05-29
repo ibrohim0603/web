@@ -14,8 +14,10 @@ export default function Single() {
   }, [id]);
   console.log(price);
   function plus() {
-    setPrice(Number(price) + products?.price);
-    setCounter(counter + 1);
+    if (products?.price > 0) {
+      setPrice(Number(price) + products?.price);
+      setCounter(counter + 1);
+    }
   }
   function minus() {
     if (counter > 1 && price > 0) {
@@ -34,7 +36,7 @@ export default function Single() {
     }
   }, 500);
   return (
-    <div className={s.single}>
+    <div className={s.single} id="active">
       <div className={s.single_grid}>
         <div className={s.single_img}>
           <img

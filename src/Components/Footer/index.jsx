@@ -1,11 +1,14 @@
 import React from "react";
 import s from "./style.module.scss";
-import logo from "../../assets/logos/dark-logo.png";
-import { Link } from "react-router-dom";
+import logo from "../../assets/logos/white-logo.png";
+import { Link, useLocation } from "react-router-dom";
+import About from "../../pages/About";
 
 export default function Footer() {
+  const name = useLocation();
   return (
     <div className={s.footer}>
+      {name.pathname === "/about" ? "" : <About />}
       <div className={s.footer_flex}>
         <div className={s.footer_logo}>
           <div className={s.footer_img}>
@@ -23,14 +26,14 @@ export default function Footer() {
         </div>
         <div className={s.footer_links}>
           <div className={s.footer_link}>
-            <h2>Quick links</h2>
+            <h2>Быстрые ссылки</h2>
             <Link to={"/products"}>All products</Link>
             <Link to={"/category"}>All categorys</Link>
             <Link to={"/about"}>About Us</Link>
             <Link to={"/contact"}>Contact Us</Link>
           </div>
           <div className={s.footer_link}>
-            <h2>CONTACT US</h2>
+            <h2>Cвязаться с нами</h2>
             <a href="globus"> globusouvenir@gmail.com</a>
             <a href="globus"> education0603@gmail.com</a>
           </div>

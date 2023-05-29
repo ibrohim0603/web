@@ -34,7 +34,7 @@ export default function Navbar() {
             href={"#!"}
           />
         </NavLink>
-        <NavLink to={"/products"}>
+        <NavLink to={"/about"}>
           <Links
             text={"About us"}
             color={"black"}

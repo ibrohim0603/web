@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import s from "./style.module.scss";
 import { instance } from "../../axios";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function AllProduct() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    instance.get("/products").then((res) => setProducts(res?.data?.data));
+    instance
+      .get(
+        `${mal.pathname === "/discount" ? "/products/discount" : "/products"}`
+      )
+      .then((res) => setProducts(res?.data?.data));
   }, []);
+  const mal = useLocation();
 
+  console.log();
   return (
     <div className={s.product}>
       <div className={s.choose}>
