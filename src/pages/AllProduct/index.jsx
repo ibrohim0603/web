@@ -19,16 +19,12 @@ export default function AllProduct() {
   const newArray = [];
 
   products.map((item, e = 0) => {
-    // console.log(item?.categoryId === tovar[0], "id");
     e++;
-    console.log(e);
+
     if (item?.categoryId === tovar[e]) {
       newArray.push(item);
-      console.log(newArray, "arr");
     }
   });
-  // console.log(tovar[1]);
-  // console.log(newArray);
 
   return (
     <div className={s.product}>

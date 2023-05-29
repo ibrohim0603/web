@@ -12,7 +12,6 @@ export default function Single() {
     instance.get(`/products/${id}`).then((res) => setProducts(res?.data));
     instance.get(`/products/${id}`).then((res) => setPrice(res?.data?.price));
   }, [id]);
-  console.log(price);
   function plus() {
     if (products?.price > 0) {
       setPrice(Number(price) + products?.price);
@@ -61,7 +60,7 @@ export default function Single() {
           </div>
           <div className={s.single_info}>
             <h5> Информация</h5>
-            <h3>Цвет : {products?.color}</h3>
+            {/* <h3>Цвет : {products?.color}</h3> */}
             <h3>Для : {products?.gender}</h3>
             <h3> Размер : {products?.size}</h3>
             <h3> Номер продукта : {products?.id}</h3>

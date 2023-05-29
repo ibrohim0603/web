@@ -11,7 +11,6 @@ export default function NavChoose() {
       .then((res) => setProducts(res?.data?.data.slice(0, 4)));
   }, []);
 
-  console.log(products);
   return (
     <div className={s.btns}>
       <h2>Filter by Interest</h2>

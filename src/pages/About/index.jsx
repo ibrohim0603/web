@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./style.module.scss";
 import { useForm } from "react-hook-form";
 import { instance } from "../../axios";
 import Map from "../../Components/map";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function About() {
+  const [num, setNum] = useState([]);
   const {
     register,
     handleSubmit,
@@ -18,10 +19,13 @@ export default function About() {
       status: "PENDING",
     });
   const postData = (data) => {
-    // console.log(data);
     instance.post("/message", data);
   };
+  useEffect(() => {
+    instance.get("/information").then((res) => setNum(res?.data?.data));
+  }, []);
   const name = useLocation();
+
   return (
     <div className={s.about}>
       {name.pathname === "/about" ? (
@@ -99,6 +103,30 @@ export default function About() {
 
           <button type="submit"> Отправить...</button>
         </form>
+      </div>
+
+      <div className={s.about_tel}>
+        <a href="email:email">
+          <h3>Свяжитесь с нами по email : {num?.[0]?.email}</h3>
+        </a>
+        <div>
+          {num?.map((e) => {
+            return (
+              <div key={e?.id} className={s.about_phone}>
+                <a href="tel:#number" type="">
+                  <h3>Позвоните нам : {e?.phone}</h3>
+                </a>
+              </div>
+            );
+          })}
+        </div>
+        <a href="instagram:instagram">
+          <h3> Наш Instagram : {num?.[0]?.instagram}</h3>
+        </a>
+
+        <a href="telegram:telegram">
+          <h3> Наш Telegram : {num?.[0]?.telegram}</h3>
+        </a>
       </div>
     </div>
   );
